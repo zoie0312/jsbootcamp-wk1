@@ -10,12 +10,22 @@ module.exports = function(grunt) {
            //  'views/contactlist.hbs',
              'app.js'
             ]
+    },
+    copy: {
+      main: {
+        files: [
+          {src: ['bower_components/**/*'], dest: 'public/'}
+
+        ]
+      },
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('copy22', ['copy']);
 };
