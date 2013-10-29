@@ -116,6 +116,7 @@ app.post("/contacts/:guid", function(req, res) {
 // for requests. Heroku defines the port in an environment variable.
 // Our app should use that if defined, otherwise 3000 is a pretty good
 // default.
-var port = process.env.PORT || 3000;
+//var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 app.listen(port);
 console.log("The server is now listening on port %s", port);
