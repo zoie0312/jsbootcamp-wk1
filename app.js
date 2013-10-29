@@ -81,7 +81,10 @@ app.get("/", function(req, res) {
 });
 
 app.get("/contacts", function(req, res) {
-  res.render("contactlist", {contacts: db});
+  
+  res.render("contactlist", {contacts: db
+                            }
+            );
 });
 
 app.get("/contacts/:guid", function(req, res) {
