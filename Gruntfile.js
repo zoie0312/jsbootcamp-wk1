@@ -9,7 +9,10 @@ module.exports = function(grunt) {
              'public/contactlist.js',
            //  'views/contactlist.hbs',
              'app.js'
-            ]
+            ],
+      options: {
+        reporter: 'reporter.js'
+      }
     },
     copy: {
       main: {
@@ -18,14 +21,20 @@ module.exports = function(grunt) {
 
         ]
       },
+    },
+    githooks: {
+      all: {
+        'pre-commit': 'jshint'
+      }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-githooks');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('copy22', ['copy']);
+  grunt.registerTask('copy_bower', ['copy']);
 };
