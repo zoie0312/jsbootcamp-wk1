@@ -8,5 +8,5 @@ function makeContactRowClickable() {
     }
     newUrl = newUrl + $(this).data("contact-guid");
     window.location.href = newUrl;
-  });
+  })
 }

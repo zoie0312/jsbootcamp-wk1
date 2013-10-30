@@ -3,11 +3,12 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     jshint: {
-     files: ['Gruntfile.js', 
+     files: ['Gruntfile.js',
              'public/contactlist.js',
            //  'views/contactlist.hbs',
+             'reporter.js',
              'app.js'
             ],
       options: {
@@ -24,7 +25,7 @@ module.exports = function(grunt) {
     },
     githooks: {
       all: {
-        'pre-commit': 'copy_bower',
+        'pre-commit': 'copy_bower'
       }
     }
   });
