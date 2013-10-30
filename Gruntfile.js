@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     },
     githooks: {
       all: {
-        'pre-commit': 'default'
+        'pre-commit': 'copy_bower'
       }
     }
   });
