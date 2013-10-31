@@ -24,8 +24,13 @@ module.exports = function(grunt) {
       },
     },
     githooks: {
-      all: {
-        'pre-commit': 'copy_bower'
+      all: {'pre-commit': 'copy_bower'}
+    },
+    mocha_phantomjs: {
+      all: ["test/**/*.html"],
+      options: {
+        reporter: "xunit",
+        output: "./mocha_result.xml"
       }
     }
   });
@@ -34,8 +39,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-githooks');
+  grunt.loadNpmTasks('grunt-mocha-phantomjs');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
   grunt.registerTask('copy_bower', ['copy']);
+  grunt.registerTask('test', ['mocha_phantomjs'])
 };
