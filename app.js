@@ -81,10 +81,13 @@ app.get("/", function(req, res) {
 });
 
 app.get("/contacts", function(req, res) {
-  
   res.render("contactlist", {contacts: db
                             }
             );
+});
+
+app.get("/next", function(req, res) {
+  res.render("next");
 });
 
 app.get("/contacts/:guid", function(req, res) {
