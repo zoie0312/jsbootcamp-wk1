@@ -3,3 +3,4 @@ bower_components/**/*
 public/bower_components/**/*
 report.txt
 npm-debug.log
+mocha_result.xml
