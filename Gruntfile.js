@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       all: {'pre-commit': 'copy_bower'}
     },
     mocha_phantomjs: {
-      all: ["test/**/*.html"],
+      all: ["tests/**/*.html"],
       options: {
         reporter: "xunit",
         output: "./mocha_result.xml"
