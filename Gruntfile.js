@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     jshint: {
      files: ['Gruntfile.js',
-             'public/contactlist.js',
+             'public/*.js',
            //  'views/contactlist.hbs',
              'reporter.js',
              'app.js'
@@ -39,7 +39,8 @@ module.exports = function(grunt) {
         reporter: "xunit",
         output: "./mocha_result.xml"
       }
-    }
+    },
+    clean: ["node_modules", "bower_components", "public/bower_components"]
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -49,6 +50,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-phantomjs');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-install-task');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
