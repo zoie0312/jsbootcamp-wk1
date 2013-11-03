@@ -19,6 +19,7 @@
     "jquery": "~2.0.3",
     "raphael": "~2.1.2",
     "bootstrap": "~3.0.0",
-    "font-awesome": "~4.0.1"
+    "font-awesome": "~4.0.1",
+    "jquery.uniform": "~2.1.1"
   }
 }

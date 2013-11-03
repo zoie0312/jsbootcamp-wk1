@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       },
     },
     watch: {
-      files: ['views/next.hbs'],
+      files: ['*/*.*'],
       //tasks: ['jshint'],
       options: {
         livereload: 3572,

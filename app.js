@@ -86,8 +86,8 @@ app.get("/contacts", function(req, res) {
             );
 });
 
-app.get("/next", function(req, res) {
-  res.render("next");
+app.get("/new_contact", function(req, res) {
+  res.render("new");
 });
 
 app.get("/contacts/:guid", function(req, res) {

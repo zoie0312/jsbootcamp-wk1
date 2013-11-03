@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Fellows Contact Manager</title>
+    <!-- Bring In Uniform -->
+    <link rel="stylesheet" href="/bower_components/jquery.uniform/themes/default/css/uniform.default.css" media="screen" />
+
+    <!-- Bring In jQuery -->
+    <script src="../bower_components/jquery/jquery.js"></script>
+
+    <!-- Bring In Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Application Styles and Scripts -->
+    <link rel="stylesheet" href="/jsbootcamp.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <script src="/bower_components/jquery.uniform/jquery.uniform.js"></script>
+
+    <script type='text/javascript'>
+    // On load, style typical form elements
+    $(function () {
+        $("input, button").uniform();
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div background="red">
+        <h2 class="fa fa-pencil-square-o" background="red">Add New Contact</h1>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-3 ">
+      <form method="POST"  role="form">
+
+          <div class="input-group ">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input type="text" class="form-control agent" id="firstName" name="firstName" />
+          </div>
+
+          <div class="input-group ">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input type="text" class="form-control" id="lastName" name="lastName" />
+          </div>
+
+          <div class="input-group ">
+            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+            <input type="text" class="form-control" id="nickname" name="nickname" />
+          </div>
+
+          <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-building fa-fw"></i></span>
+            <input type="text" class="form-control" id="company" name="company" />
+          </div>
+
+          <div class="input-group margin-bottom-sm">
+            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+            <input type="text" class="form-control" id="email" name="email" />
+          </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    </div>
+
+  <script>
+    $( "input" ).focus(function() {
+    //$( this ).next("span").css( "display", "inline" ).fadeOut( 1000 );
+    $(this).attr("placeholder", function(){
+      return this.name;
+    });
+    });
+  </script>
+  </body>
+</html>
