@@ -19,8 +19,10 @@ module.exports = {
                         process.stdout.write(str + "\n" + len + " error" +
                                 ((len === 1) ? "" : "s") + "\n");
                         var output_result = "";
-                        output_result = str + "\n" + len + " error" +
-                                ((len === 1) ? "" : "s") + "\n";
+                        var d = new Date();
+                        output_result = "\n" + str + "\n" + len + " error" +
+                                ((len === 1) ? "" : "s") + "  " +
+                                d + "\n";
                         //console.log('test1');
 
                         var fd = fs.openSync('./jshint_report.txt', 'a');
