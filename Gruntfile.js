@@ -47,11 +47,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-mocha-phantomjs');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-install-task');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('copy_bower', ['copy']);
+  grunt.registerTask('bower_copy', ['copy']);
   grunt.registerTask('test', ['mocha_phantomjs']);
-  grunt.loadNpmTasks('grunt-contrib-watch');
+
 };
