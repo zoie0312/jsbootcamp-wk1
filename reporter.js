@@ -23,7 +23,7 @@ module.exports = {
                                 ((len === 1) ? "" : "s") + "\n";
                         //console.log('test1');
 
-                        var fd = fs.openSync('./report.txt', 'a');
+                        var fd = fs.openSync('./jshint_report.txt', 'a');
                         fs.write(fd, output_result, null, null, function(err){
                                 if (err) {throw err;}
                                 console.log('file written');

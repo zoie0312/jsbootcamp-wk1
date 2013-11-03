@@ -23,6 +23,7 @@
     "grunt-githooks": "~0.2.0",
     "grunt-mocha": "~0.4.1",
     "grunt-contrib-qunit": "~0.3.0",
-    "grunt-mocha-phantomjs": "~0.3.0"
+    "grunt-mocha-phantomjs": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

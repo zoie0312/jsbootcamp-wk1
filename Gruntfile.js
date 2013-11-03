@@ -23,6 +23,13 @@ module.exports = function(grunt) {
         ]
       },
     },
+    watch: {
+      files: ['views/next.hbs'],
+      //tasks: ['jshint'],
+      options: {
+        livereload: 3572,
+      },
+    },
     githooks: {
       all: {'pre-commit': 'copy_bower'}
     },
@@ -44,5 +51,6 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['jshint']);
   grunt.registerTask('copy_bower', ['copy']);
-  grunt.registerTask('test', ['mocha_phantomjs'])
+  grunt.registerTask('test', ['mocha_phantomjs']);
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
