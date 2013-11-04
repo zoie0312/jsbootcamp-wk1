@@ -90,6 +90,25 @@ app.get("/new_contact", function(req, res) {
   res.render("new");
 });
 
+app.post("/new_contact", function(req, res) {
+  var formValues = _.pick(req.body, "firstName", "lastName", "nickname", "company", "email");
+  var new_guid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
+  var new_record = {
+    guid: new_guid,
+    firstName: formValues.firstName,
+    lastName: formValues.lastName,
+    nickname: formValues.nickname,
+    company: formValues.company,
+    email: formValues.email
+  };
+  db.push(new_record);
+  res.redirect("/contacts");
+
+});
+
 app.get("/contacts/:guid", function(req, res) {
   var guid = req.param("guid"),
       record = _.findWhere(db, {guid: guid});
