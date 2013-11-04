@@ -30,6 +30,7 @@
     <div class="container-fluid">
       <div background="red">
         <h2 class="fa fa-pencil-square-o" background="red">Add New Contact</h1>
+        <span>...try clicking the input boxes</span>
       </div>
     </div>
 
@@ -62,7 +63,7 @@
             <input type="text" class="form-control" id="email" name="email" />
           </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="button" class="btn btn-default">Submit</button>
       </form>
     </div>
     </div>
@@ -70,9 +71,14 @@
   <script>
     $( "input" ).focus(function() {
     //$( this ).next("span").css( "display", "inline" ).fadeOut( 1000 );
-    $(this).attr("placeholder", function(){
-      return this.name;
+      $(this).attr("placeholder", function(){
+        return this.name;
+      });
     });
+  </script>
+  <script>
+    $( "button, .btn").click(function() {
+      alert("Sorry, not implemented yet!");
     });
   </script>
   </body>
