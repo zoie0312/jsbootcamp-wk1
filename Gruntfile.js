@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       },
     },
     githooks: {
-      all: {'pre-commit': 'copy_bower'}
+      all: {'pre-commit': 'jshint',}
     },
     mocha_phantomjs: {
       all: ["tests/**/*.html"],
